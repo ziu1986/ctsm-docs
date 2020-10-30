@@ -35,11 +35,13 @@ How to get a specific branch
 Check all existing branches
 
 ::
+
     git branch --all
 
 To run FATES EMERALD platform (in this example release 2.0.1)
 
 ::
+
     git checkout release-emerald-platform2.0.1 -b new_branch_name
 
 Which branch do I run?
