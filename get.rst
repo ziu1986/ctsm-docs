@@ -28,22 +28,19 @@ CLONE from GitHub (run only first time, or to update clm/ctsm version), in home 
 
     git clone -b release-clm5.0 https://github.com/NordicESMhub/ctsm.git
 
-OBS! Before building your CTSM case make sure you unload (purge) all loaded modules.
-
-::
-
-    module purge
-
-CHECK loaded modules
-		 
-::
-
-    module list
-
 
 How to get a specific branch
 +++++++++++++++++++++++++++++
 
+Check all existing branches
+
+::
+    git branch --all
+
+To run FATES EMERALD platform (in this example release 2.0.1)
+
+::
+    git checkout release-emerald-platform2.0.1 -b new_branch_name
 
 Which branch do I run?
 ++++++++++++++++++++++
