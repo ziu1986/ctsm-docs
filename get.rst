@@ -8,33 +8,31 @@ If you are a novice, that's where you should start. You get the source code and 
 
 NordicESMhub maintains a CTSM repository with all the configuration files for running on machines in the Nordics. For now we support:
 
-- abel (UiO, Norway)
+- saga (sigma2, Norway)
+- fram (sigma2, Norway)
 
 If you machine is not in the list and would like we support it, please contact us.
 
 How to get CTSM
 ++++++++++++++++
+
+For compatibility, load git version 2.23.0 or higher
+
+::
+
+    git/2.23.0-GCCcore-8.3.0
+
 CLONE from GitHub (run only first time, or to update clm/ctsm version), in home folder
 
 ::
 
     git clone -b release-clm5.0 https://github.com/NordicESMhub/ctsm.git
 
-LOAD necessary modules in .bashrc (only first time)
+OBS! Before building your CTSM case make sure you unload (purge) all loaded modules.
 
 ::
 
-    emacs .bashrc & 
-
-On abel, add these three modules 
-
-::
-
-    module load python2/2.7.10
-    module load cesm
-    module load git
-		        
-save and close
+    module purge
 
 CHECK loaded modules
 		 
