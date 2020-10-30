@@ -58,13 +58,14 @@ eg
 2) Change configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+- For instance, to change the duration of a simulation to 5 days:
+
 ::
 
     ./xmlchange STOP_OPTION=ndays #(nyears, nmonths)
     ./xmlchange STOP_N=5 #(then 5 days)
-    ./xmlchange NTASKS=1 #(number of CPU's, can be increased if excitation error)
 	
-or edit the xml files is another way to change these parameters
+or edit the xml files is another way to change these parameters (**not recommended**).
 
 3) setup case
 ~~~~~~~~~~~~~~
@@ -91,8 +92,16 @@ add this below
 
 ::    
 
-    (./case.build --clean)
     ./case.build
+
+
+**Remark**: if your build fails or if you make changes and need to rebuild, make sure you clean the previous build:
+
+
+::    
+
+    ./case.build --clean
+
 
 6) run case
 ~~~~~~~~~~~~~~
@@ -116,19 +125,45 @@ Follow https://github.com/NordicESMhub/ctsm-dev/blob/master/Updating_FATES (base
 Run a single cell case  
 -----------------------
 
+CLM supports running using single-point or regional datasets that are customized to a particular region. 
+
+In the section below we show you how to run ready to use single-point configurations (out of the box) and then show you how to create your own dataset for any location of your choice.
+
 Out of the box
-+++++++++++++++
+~~~~~~~~~~~~~~
+
+To run for the Brazil test site do the following:
 
 ::
 
-  ./create_newcase --case ~/cases/brazil_I1PtClm50SpGs --compset I1PtClm50SpGs  --res  1x1_brazil --machine abel --run-unsupported --project geofag
+  export CESM_ACCOUNT=nn2806k
 
+  ./create_newcase -case ~/cases/testSPDATASET -res 1x1_brazil -compset I2000Clm50SpGs  --machine abel --run-unsupported --project $CESM_ACCOUNT
+
+
+**Remark**: make sure you set **CESM_ACCOUNT** to your project.
 Customized
-+++++++++++
+~~~~~~~~~~~
+
+- Step-1: 
+
+.. include:: Tutorial_creating_surface_data_for_single_point.rst
+
+- Step-2: For atmospheric forcing (own atm forcing and surface data) (include scripts)
+
+.. include:: README_Single_point.rst 
+
+
+Change configuration
++++++++++++++++++++++
 
 ::
 
-   ./create_newcase --case ~/cases/brazil_I2000Clm50BgcCruGs --compset I2000Clm50BgcCruGs  --res  1x1_brazil --machine abel --run-unsupported --project geofag
+    ./xmlchange NTASKS=1 #(number of CPU's, can be increased if excitation error)
 
-- Step-1: Tutorial_creating_surface_data_for_single_point.md
-- Step-2: For atmospheric forcing README_Single point (own atm forcing and surface data) (include scripts)
+
+
+Run a regional case 
+-----------------------
+
+.. include:: regional_case.rst
