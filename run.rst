@@ -1,11 +1,8 @@
 Run CTSM 
 ========
 
-NB! this example is connected to project nn2806k (for your own project, change the project code. To see available projects and resources, use cost -p):
+OBS! This example is connected to project nn2806k. Change in case of diverging project code X in nnXXXXk. (To see available projects and resources for your account, use cost or groups).
 
-::
-
-	export CESM_ACCOUNT=nn2806k
 
 Run your very first CTSM case
 ------------------------------
