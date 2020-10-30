@@ -55,8 +55,7 @@ Create your own branches before continuing, in ~/ctsm AND in ~ctsm/cime. Do this
     
 ::
 
-    git branch <username_clm5.0.12>   # useful for remembering version, name according to function e.g. username_cime_clm5.0.12 and username_fates_clm5.0.12
-    git checkout  <username_clm5.0.12>
+    git checkout fates_emerald_api -b new_branch_name # useful for remembering version, name according to function e.g. username_cime_clm5.0.12 and username_fates_clm5.0.12
     git branch # to verify that you are on the branch you just created
 
 When you need to do your own development.
