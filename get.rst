@@ -11,7 +11,7 @@ NordicESMhub maintains a CTSM repository with all the configuration files for ru
 - saga (sigma2, Norway)
 - fram (sigma2, Norway)
 
-If you machine is not in the list and would like we support it, please contact us.
+If your machine is not in the list and you would like us to support it, please contact us.
 
 How to get CTSM
 ++++++++++++++++
