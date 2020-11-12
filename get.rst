@@ -10,14 +10,14 @@ NordicESMhub maintains a CTSM repository with all the configuration files for ru
 
 If your machine is not in the list and you would like us to support it, please contact us.
 
-How to get CTSM (for users)
----------------------------
-
-For compatibility, load git version 2.23.0 or higher
+For compatibility, load git version 2.23.0 or higher on your super computer
 
 ::
 
     git/2.23.0-GCCcore-8.3.0
+
+How to get CTSM (for users)
+---------------------------
 
 To get the FATES EMERALD platform version, CLONE from NordicESM hub
 
