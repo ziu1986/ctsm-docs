@@ -22,12 +22,14 @@ For compatibility, load git version 2.23.0 or higher
 
     git/2.23.0-GCCcore-8.3.0
 
-CLONE from GitHub (run only first time, or to update clm/ctsm version), in home folder
+CLONE from GitHub
 
 ::
 
-    git clone -b release-clm5.0 https://github.com/NordicESMhub/ctsm.git
-
+    git clone -b release-clm5.0 https://github.com/NordicESMhub/ctsm.git ${HOME}/ctsm
+   
+In this example we are checking out the release-clm5.0 tag and create a new local branch (recomended).
+The destination of the checkout is a directoy (eg. ctsm) in our home directory. 
 
 How to get a specific branch
 +++++++++++++++++++++++++++++
